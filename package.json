@@ -4,8 +4,9 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
-    "res":"turbo res",
-    "res:dev":"turbo res:dev",
+    "res": "turbo res",
+    "res:dev": "turbo res:dev",
+    "clean": "turbo clean",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
@@ -23,8 +24,7 @@
   },
   "packageManager": "npm@10.2.3",
   "workspaces": [
-    "common",
-    "react-app",
-    "next-app"
+    "packages/*",
+    "apps/*"
   ]
 }

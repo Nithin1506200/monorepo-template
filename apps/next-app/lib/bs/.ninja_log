@@ -1,0 +1,6 @@
+# ninja log v6
+0	12	1704363248656547874	src/app/nextComponent.ast	3475b7f33c7d4c49
+12	19	1704363248664139268	src/app/nextComponent.d	c2f4cf513da577a7
+19	32	1704363248676586607	src/app/nextComponent.cmj	4c27f2a1d1c0c12e
+19	32	1704363248676586607	src/app/nextComponent.cmi	4c27f2a1d1c0c12e
+19	32	1704363248676586607	../../src/app/nextComponent.bs.js	4c27f2a1d1c0c12e

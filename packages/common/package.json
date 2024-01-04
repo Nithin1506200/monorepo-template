@@ -1,0 +1,17 @@
+{
+  "name": "@common/ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "clean": "rescript clean",
+    "res": "rescript build -with-deps",
+    "res:dev": "rescript build -with-deps -w"
+  },
+  "exports": {
+    "./*": "./src/"
+  },
+  "dependencies": {}
+}
