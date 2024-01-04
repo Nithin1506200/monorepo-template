@@ -1,0 +1,15 @@
+rescript = 1
+g_finger := /Users/nithin.n/Documents/juspay_github/monorepo-template/node_modules/@rescript/react/lib/ocaml/install.stamp
+g_finger := /Users/nithin.n/Documents/juspay_github/monorepo-template/node_modules/@common/ui/lib/ocaml/install.stamp
+rule astj
+  command = /Users/nithin.n/Documents/juspay_github/monorepo-template/node_modules/rescript/darwinarm64/bsc.exe  -bs-v 10.1.4 -bs-jsx 4 -bs-jsx-mode classic -bs-super-errors -absname -bs-ast -o $out $i
+o src/component.ast : astj ../../src/component.res
+rule deps
+  command = /Users/nithin.n/Documents/juspay_github/monorepo-template/node_modules/rescript/darwinarm64/bsb_helper.exe -hash 210ca72ff930abc306a1d7591f43211a $in
+  restat = 1
+o src/component.d : deps src/component.ast
+rule mij
+  command = /Users/nithin.n/Documents/juspay_github/monorepo-template/node_modules/rescript/darwinarm64/bsc.exe -I src/assets -I src -I /Users/nithin.n/Documents/juspay_github/monorepo-template/node_modules/@rescript/react/lib/ocaml -I /Users/nithin.n/Documents/juspay_github/monorepo-template/node_modules/@common/ui/lib/ocaml -bs-super-errors  -bs-package-name react-app -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
+  dyndep = 1
+  restat = 1
+o src/component.cmj src/component.cmi ../../src/component.bs.js : mij src/component.ast

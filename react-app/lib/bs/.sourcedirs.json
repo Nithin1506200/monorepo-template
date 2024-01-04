@@ -1,0 +1,1 @@
+{ "dirs" : [ "src" , "src/assets" ] , "pkgs" : [ [ "@common/ui" , "/Users/nithin.n/Documents/juspay_github/monorepo-template/node_modules/@common/ui" ] , [ "@rescript/react" , "/Users/nithin.n/Documents/juspay_github/monorepo-template/node_modules/@rescript/react" ] ] , "generated" : [] }

@@ -1,0 +1,14 @@
+rescript = 1
+g_finger := /Users/nithin.n/Documents/juspay_github/monorepo-template/node_modules/@rescript/react/lib/ocaml/install.stamp
+rule astj
+  command = /Users/nithin.n/Documents/juspay_github/monorepo-template/node_modules/rescript/darwinarm64/bsc.exe  -w a -bs-v 10.1.4 -bs-jsx 4 -bs-jsx-mode classic -bs-super-errors -absname -bs-ast -o $out $i
+o src/Allok.ast : astj ../../src/Allok.res
+rule deps
+  command = /Users/nithin.n/Documents/juspay_github/monorepo-template/node_modules/rescript/darwinarm64/bsb_helper.exe -hash 625af8c5ed0532416d8ee4123cc4d242 $in
+  restat = 1
+o src/Allok.d : deps src/Allok.ast
+rule mij
+  command = /Users/nithin.n/Documents/juspay_github/monorepo-template/node_modules/rescript/darwinarm64/bsc.exe -I src -I /Users/nithin.n/Documents/juspay_github/monorepo-template/node_modules/@rescript/react/lib/ocaml -bs-super-errors  -w a -bs-package-name @common/ui -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
+  dyndep = 1
+  restat = 1
+o src/Allok.cmj src/Allok.cmi ../../src/Allok.bs.js : mij src/Allok.ast

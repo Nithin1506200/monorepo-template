@@ -1,0 +1,17 @@
+{
+  "jsx": { "version": 4, "mode": "classic" },
+  "name": "next-app",
+  "bsc-flags": ["-bs-super-errors"],
+  "sources": {
+    "dir": "src",
+    "subdirs": true
+  },
+  "suffix": ".bs.js",
+  "namespace": false,
+  "ppx-flags": [],
+  "package-specs": {
+    "module": "es6",
+    "in-source": true
+  },
+  "bs-dependencies": ["@rescript/react", "@common/ui"]
+}
